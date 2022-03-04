@@ -7,12 +7,12 @@
         var_dump($_POST);
         var_dump($_FILES);
 
-         var_dump(move_uploaded_file($_FILES['images']['tmp_name'], "/images/"));
+        //  var_dump(move_uploaded_file($_FILES['images']['tmp_name'], "/images/"));
 
         //Enregistrement BDD
-        $req=$pdo->prepare("insert into articles(titre, contenu, image) values(?, ?, ?)");
+        // $req=$pdo->prepare("insert into articles(titre, contenu, image) values(?, ?, ?)");
 
-        $req->execute([$_POST['titre'],$_POST['contenu'],$_POST['image']]);
+        // $req->execute([$_POST['titre'],$_POST['contenu'],$_POST['image']]);
 
         //Enregisre l'image téléchargé dans un dossier du projet
 
